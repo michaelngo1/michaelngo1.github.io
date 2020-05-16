@@ -1,0 +1,258 @@
+/* General elements */
+/* navbar */
+.leftbar {
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    width: 255px;
+    background-color: #343a40;
+    color: white;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.leftbar h2 {
+    padding: 10px 20px;
+    height: 60px;
+    margin-bottom: 0;
+}
+
+.leftbar li {
+    list-style-type: none;
+}
+
+.leftbar a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 105%;
+    transition: all .2s ease-out;
+}
+
+.leftbar .active {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.leftbar a:hover:not(.active) {
+    background-color: #6c757d;
+}
+
+.leftbar .navbar-toggle.large {
+    display: none;
+}
+
+/* rightnav */
+.rightnav {
+    height: auto; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow-y: auto; /* Enable scrolling if the sidenav has too much content */
+    overflow-x: none;
+    width: 175px;
+    top: 120px;
+    right: 0;
+    border-left: 1px solid silver;
+    padding: 0px 10px;
+}
+
+.rightnav li {
+    list-style-type: none;
+}
+
+.rightnav a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.rightnav a:hover {
+    color: blue;
+}
+
+/* content */
+.mainheader {
+    padding-top: 32px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid silver;
+}
+
+.content {
+    margin-left: 275px;
+    margin-right: 195px;
+    padding: 0px 15px;
+}
+
+p .top {
+    padding-top: 10px;
+}
+
+.mainimg {
+    padding: 15px 25px;
+    float: right;
+}
+
+/* blog page */
+.post-header {
+    display: flex;
+    align-items: flex-end;
+}
+
+.post-header .date {
+    margin-left: auto;
+    font-weight: lighter;
+}
+
+/* General elements when mobile */
+/* medium devices */
+@media only screen and (max-width: 992px) {
+    /* rightnav */
+    .rightnav {
+        display: none;
+    }
+
+    /* content */
+    .content {
+        margin-right: 20px;
+    }
+
+    .mainimg {
+        padding: 15px 15px;
+        width: 50%;
+    }
+}
+
+/* small devices */
+@media only screen and (max-width: 768px) {
+    /* navbar */
+    .leftbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: left;
+    }
+
+    .leftbar, .navbar-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftbar .navbar-list {
+        display: none;
+    }
+
+    .leftbar a {
+        padding: 1vh 20px;
+    }
+
+    .leftbar .navbar-toggle.large {
+        display: block;
+    }
+
+    .leftbar .navbar-toggle {
+        align-self: flex-end;
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        height: 58px;
+        width: 58px;
+        margin-bottom: 2px;
+        padding: 14px;
+        font-size: 20px;
+        text-align: center;
+        transition: color .2s ease-out;
+    }
+
+    .leftbar .navbar-toggle.close {
+        opacity: 1;
+        text-shadow: none;
+        color: white;
+        font-size: 23px;
+        padding-top: 18px;
+    }
+
+    .leftbar .navbar-toggle:hover {
+        color: #6c757d;
+    }
+
+    .leftbar .navbar-toggleshow {
+        display: flex;
+    }
+
+    .leftbar .navbar-toggle.off {
+        opacity: 0;
+        -webkit-transition: all 100ms ease-in;
+        -moz-transition: all 100ms ease-in;
+        -o-transition: all 100ms ease-in;
+        transition:all 100ms ease-in;
+        z-index: -1;
+    }
+
+    .leftbar .navbar-toggle.on {
+        opacity: 1;
+        -webkit-transition: all 400ms ease-out;
+        -moz-transition: all 400ms ease-out;
+        -o-transition: all 400ms ease-out;
+        transition:all 400ms ease-out;
+        z-index: 1;
+    }
+
+    /* content */
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mainimg {
+        padding: 15px 15px;
+        width: 100%;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Image gallery elements */
+.gallery {
+    border: 3px solid white;
+    border-radius: 6px;
+}
+
+.gallery:hover {
+    border: 3px solid #A9A9A9;
+    border-radius: 6px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.responsive {
+    box-sizing: border-box;
+    padding: 4px;
+    float: left;
+    width: 49.9999%;
+}
+
+video {
+    max-width: 90vw;
+    max-height:100vh;
+    height:auto;
+    width:auto;
+    display: block;
+    margin: 25px auto;
+}
+
+video:hover {
+    padding: 1px;
+}
+
+@media only screen and (max-width: 768px) {
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+

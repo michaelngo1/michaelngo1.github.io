@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <title>Michael Ngo</title>
+        <script src="https://kit.fontawesome.com/e545558b51.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="leftbar shadow">
+            <h2>Michael Ngo</h2>
+            <div class="navbar-toggle on large">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-toggle off large">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="navbar-list">
+                <li><a href="index.html">thoughts</a></li>
+                <li><a href="offthebeatenpath.html">off the beaten path</a></li>
+                <li><a href="urbanity.html">urbanity</a></li>
+                <li><a href="quietudeiniron.html">quietude in iron</a></li>
+                <li><a href="contact.html" class="active">contact</a></li>
+                <li><a href="aboutme.html">about me</a></li>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h3 class="mainheader display-4 text-muted">contact</h3>
+            <div style="height:20px;"></div>
+            <button type="button" class="btn btn-outline-secondary">Email</button>
+            <a href="mailto:michaelngo.no1@gmail.com" id="emailaddr">michaelngo.no1@gmail.com</a>
+            <script>
+                let emailaddr = document.querySelector('#emailaddr');
+                document.querySelector('button').onclick = function() {
+                    if (emailaddr.style.visibility === 'visible') {
+                        emailaddr.style.visibility = 'hidden';
+                    }
+                    else {
+                        emailaddr.style.visibility = 'visible';
+                    }
+                }
+            </script>
+
+            <div style="height:20px;"></div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="js/navbar.js"></script>
+    </body>
+</html>
